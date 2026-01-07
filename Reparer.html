@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMEDIA - Formulaire de Contact</title>
+<title>IMEDIA - Contact</title>
 <style>
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family: "Segoe UI", Tahoma, Arial, sans-serif;}
+body { background: #f4f6f9; min-height: 100vh; padding: 20px; }
+
+/* Navbar */
 .navbar {
     max-width: 1100px;
     margin: 0 auto 25px auto;
@@ -22,42 +20,11 @@
     align-items: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #F59E0B;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #00B4D8;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    background: #00B4D8;
-    color: white;
-}
-.navbar .active{
-    color: #F59E0B;
-}
-
-
-body {
-  background: #f4f6f9;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
+.navbar .logo { font-size: 24px; font-weight: bold; color: #F59E0B; }
+.navbar ul { list-style: none; display: flex; gap: 20px; }
+.navbar a { text-decoration: none; font-weight: bold; color: #00B4D8; padding: 8px 14px; border-radius: 8px; transition: 0.3s; }
+.navbar a:hover { background: #00B4D8; color: white; }
+.navbar .active { color: #F59E0B; }
 
 /* Container */
 .granddiv {
@@ -70,178 +37,98 @@ body {
 }
 
 /* Title */
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.4rem;
-  color: #0f172a;
-}
+h1 { text-align: center; margin-bottom: 20px; font-size: 2.4rem; color: #0f172a; }
+
+/* Messages */
+.success { text-align:center; color:green; margin-bottom:15px; }
+.error { text-align:center; color:red; margin-bottom:15px; }
 
 /* Sections */
-.formulaire {
-  margin-bottom: 30px;
-  padding: 25px;
-  background: #f8fafc;
-  border-radius: 15px;
-  border: 1px solid #e5e7eb;
-}
-
-/* Section titles */
-h2 {
-  color: #f59e0b;
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  border-bottom: 2px solid #f59e0b;
-  padding-bottom: 6px;
-}
+.formulaire { margin-bottom: 30px; padding: 25px; background: #f8fafc; border-radius: 15px; border: 1px solid #e5e7eb; }
+h2 { color: #f59e0b; margin-bottom: 20px; font-size: 1.3rem; border-bottom: 2px solid #f59e0b; padding-bottom: 6px; }
 
 /* Inputs */
 .divgroup { margin-bottom: 18px; }
-
-label {
-  display:block;
-  margin-bottom:8px;
-  font-weight: 600;
-  color:#334155;
-}
-
+label { display:block; margin-bottom:8px; font-weight: 600; color:#334155; }
 input, select, textarea {
-  width:100%;
-  padding:12px 14px;
-  border:1px solid #cbd5e1;
-  border-radius:10px;
-  font-size:15px;
-  transition: all 0.2s ease;
+  width:100%; padding:12px 14px; border:1px solid #cbd5e1; border-radius:10px; font-size:15px; transition: all 0.2s ease;
 }
-
 input:focus, select:focus, textarea:focus {
-  border-color: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
-  outline:none;
+  border-color: #f59e0b; box-shadow: 0 0 0 3px rgba(245,158,11,0.15); outline:none;
 }
-
-textarea {
-  min-height:120px;
-  resize:vertical;
-}
+textarea { min-height:120px; resize:vertical; }
 
 /* Buttons */
-.les-boutons {
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  margin-top:30px;
-}
-
-button {
-  padding:14px 35px;
-  border:none;
-  border-radius:12px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  transition: all 0.25s ease;
-}
-
-.sub {
-  background:#f59e0b;
-  color:#fff;
-}
-
-.sub:hover {
-  background:#d97706;
-  transform: translateY(-2px);
-  box-shadow:0 6px 12px rgba(0,0,0,0.15);
-}
-
-.reset {
-  background:#64748b;
-  color:#fff;
-}
-
-.reset:hover {
-  background:#475569;
-  transform: translateY(-2px);
-  box-shadow:0 6px 12px rgba(0,0,0,0.15);
-}
+.les-boutons { display:flex; gap:20px; justify-content:center; margin-top:30px; }
+button { padding:14px 35px; border:none; border-radius:12px; font-size:16px; font-weight:bold; cursor:pointer; transition: all 0.25s ease; }
+.sub { background:#f59e0b; color:#fff; }
+.sub:hover { background:#d97706; transform: translateY(-2px); box-shadow:0 6px 12px rgba(0,0,0,0.15); }
+.reset { background:#64748b; color:#fff; }
+.reset:hover { background:#475569; transform: translateY(-2px); box-shadow:0 6px 12px rgba(0,0,0,0.15); }
 
 /* Responsive */
-@media(max-width:768px){
-  .granddiv {
-    padding:25px 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
+@media(max-width:768px){ .granddiv { padding:25px 20px; } h1 { font-size: 2rem; } }
 </style>
+
 </head>
 <body>
+
 <nav class="navbar">
     <div class="logo">IMEDIA</div>
     <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="Reparer.html" class="active">contact</a></li>
-        <li><a href="Contact (1).html">Informations</a></li>
+        <li><a href="contact.php" class="active">Contact</a></li>
+        <li><a href="information.html">Informations</a></li>
     </ul>
 </nav>
+
 <div class="granddiv">
     <h1>Contactez IMEDIA</h1>
-    <form action="" method="post">
-
-        <!-- Infos Client -->
+    <form action="https://formsubmit.co/90485a9a5734f0ec90ed7b149454306b" method="POST" >
         <div class="formulaire">
             <h2>Vos Coordonnées</h2>
             <div class="divgroup">
                 <label>Nom *</label>
-                <input type="text" required>
+                <input type="text" name="nom" placeholder="Nom" required>
             </div>
             <div class="divgroup">
                 <label>Prénom *</label>
-                <input type="text" required>
+                <input type="text" name="prenom" placeholder="prénom" required>
             </div>
             <div class="divgroup">
                 <label>Email *</label>
-                <input type="email" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="divgroup">
                 <label>Téléphone</label>
-                <input type="tel">
+                <input type="tel" placeholder="Téléphone" name="tel" required>
             </div>
         </div>
 
-        <!-- Infos Projet -->
         <div class="formulaire">
-    <h2>Votre Projet IMEDIA</h2>
-    <div class="divgroup">
-        <label>Type de service *</label>
-        <select required>
-            <option value="">Sélectionnez</option>
-            <option>Design Graphique</option>
-            <option>Impression Offset</option>
-            <option>Impression Numérique</option>
-            <option>Supports et Enseignes</option>
-        </select>
-    </div>
-    <div class="divgroup">
-        <label>Description du projet *</label>
-        <textarea placeholder="Expliquez votre demande : logo, flyer, affiche, etc." required></textarea>
-    </div>
+            <h2>Votre Projet IMEDIA</h2>
+            <div class="divgroup">
+                <label>Type de service *</label>
+                <select name="service" required>
+                    <option value="">Sélectionnez</option>
+                    <option>Design Graphique</option>
+                    <option>Impression Offset</option>
+                    <option>Impression Numérique</option>
+                    <option>Supports et Enseignes</option>
+                </select>
+            </div>
+            <div class="divgroup">
+                <label>Description du projet *</label>
+                <textarea name="message" placeholder="Expliquez votre demande : logo, flyer, affiche, etc." required></textarea>
+            </div>
+        </div>
 
-        <!-- Boutons -->
         <div class="les-boutons">
             <button type="reset" class="reset">Annuler</button>
             <button type="submit" class="sub">Envoyer</button>
         </div>
-
     </form>
 </div>
 
 </body>
 </html>
-
-
-
-
