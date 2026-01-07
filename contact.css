@@ -1,0 +1,276 @@
+/* ===============================
+   NAVBAR
+================================ */
+.site-header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #334155;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f59e0b;
+}
+
+.nav-links .active {
+  color: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1f2933;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.conteneur {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   TITLE
+================================ */
+.conteneur h1 {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   TABLE
+================================ */
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.tableau caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f59e0b;
+  font-size: 1.2rem;
+}
+
+/* Table cells */
+.tableau th,
+.tableau td {
+  border: 1px solid #e5e7eb;
+  padding: 15px;
+  vertical-align: top;
+}
+
+/* Left title column */
+.titre {
+  background: #f1f5f9;
+  color: #0f172a;
+  font-weight: bold;
+  text-align: center;
+  width: 180px;
+}
+
+/* Section headers */
+.section-title {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Labels */
+.mo3tayett {
+  font-weight: bold;
+  color: #334155;
+  width: 200px;
+}
+
+/* Links */
+.tableau a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tableau a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   SOCIAL LINKS
+================================ */
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.lien {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.lien:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+.lien:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.imgtawasol {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===============================
+   HOURS
+================================ */
+.horaire {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.horaire li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* ===============================
+   REVIEWS
+================================ */
+.avis-client {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.avis-client:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.avis-client h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.avis-client span {
+  color: #f59e0b;
+}
+
+.date {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .conteneur {
+    padding: 20px;
+  }
+
+  .tableau th,
+  .tableau td {
+    padding: 10px;
+  }
+
+  .social-media {
+    flex-direction: column;
+  }
+}
+/* ADD REVIEW FORM */
+.add-avis {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.add-avis h2 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.add-avis input,
+.add-avis textarea,
+.add-avis select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+}
+
+.add-avis button {
+  background: #f59e0b;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-avis button:hover {
+  background: #d97706;
+}
+

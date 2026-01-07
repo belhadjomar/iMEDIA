@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - IMEDIA</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<script>
+function ajouterAvis() {
+  let nom = document.getElementById("nom").value;
+  let message = document.getElementById("message").value;
+  let note = document.getElementById("note").value;
+
+  if (nom === "" || message === "") {
+    alert("Remplissez tous les champs");
+    return;
+  }
+
+  let div = document.createElement("div");
+  div.className = "avis-client";
+
+  div.innerHTML = `
+    <h3>${nom} <span>${note}</span></h3>
+    <p class="date">Aujourd'hui</p>
+    <p>${message}</p>
+  `;
+
+  document.getElementById("nouveaux-avis").prepend(div);
+
+  // clear form
+  document.getElementById("nom").value = "";
+  document.getElementById("message").value = "";
+}
+</script>
+
+<body>
+   <header class="site-header">
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="acceuil.html">IMEDIA</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="acceuil.html">Accueil</a></li>
+      <li><a href="Reparer.html" >conatct</a></li>
+      <li><a href="contact.html" class="active">Informations</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="conteneur">
+    <h1>Contactez-nous</h1>
+
+    <table class="tableau">
+      <caption>Informations de Contact</caption>
+
+      <tr>
+        <th rowspan="4" class="titre">Coordonnées</th>
+        <td class="mo3tayett">Adresse</td>
+        <td>10, Rue de la Révolution - Nabeul</td>
+      </tr>
+
+      <tr>
+        <td class="mo3tayett">Téléphone</td>
+        <td>72 231 228 - 22 013 616</td>
+      </tr>
+
+      <tr>
+        <td class="mo3tayett">Email</td>
+        <td>
+          <a href="mailto:malek.imedia@gmail.com">malek.imedia@gmail.com</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="mo3tayett">Réseaux sociaux</td>
+        <td class="social-media">
+          <a href="https://www.facebook.com/imedia.impression?locale=fr_FR" target="_blank" class="lien">
+            <img src="facebook-logo-facebook-icon-transparent-free-png.webp" alt="Facebook" class="imgtawasol" />
+            IMEDIA
+          </a>
+          <a href="https://www.instagram.com/maleksouissi" target="_blank" class="lien">
+            <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram" class="imgtawasol" />
+            maleksouissi
+          </a>
+          <a href="https://wa.me/22013616" target="_blank" class="lien">
+            <img src="whatsapp-icon-free-png.webp" alt="WhatsApp" class="imgtawasol" />
+            +216 22 013 616
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <th colspan="3" class="section-title">Disponibilité</th>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          <ul class="horaire">
+            <li><strong>Lundi - Vendredi:</strong> 9h00 - 12h00 | 14h00 - 18h00</li>
+            <li><strong>Samedi:</strong> 9h00 - 12h00</li>
+            <li><strong>Dimanche:</strong> Fermé</li>
+            <li><strong>Dépannage:</strong> 24h/24 - 7j/7</li>
+            <li><strong>Rendez-vous:</strong> En ligne ou par téléphone</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th colspan="3" class="section-title">Avis Clients</th>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          <div class="avis-client">
+            <h3>Ali Tounsi <span>★★★★★</span></h3>
+            <p class="date">25 Novembre 2025</p>
+            <p>Service rapide et professionnel. Je recommande !</p>
+          </div>
+
+          <div class="avis-client">
+            <h3>Omar Belhadj <span>★★★★☆</span></h3>
+            <p class="date">30 Septembre 2025</p>
+            <p>Bon rapport qualité-prix. Personnel compétent.</p>
+          </div>
+
+          <div class="avis-client">
+            <h3>Chokri Bousetta <span>★★★★★</span></h3>
+            <p class="date">15 Septembre 2025</p>
+            <p>Dépannage rapide et efficace.</p>
+          </div>
+
+          <div class="avis-client">
+            <h3>Walid Messadi <span>★★★★☆</span></h3>
+            <p class="date">28 Août 2025</p>
+            <p>Très bonne communication et service propre.</p>
+          </div>
+
+          <div class="add-avis">
+           <h2>Laisser un avis</h2>
+
+            <input type="text" id="nom" placeholder="Votre nom" required>
+            <textarea id="message" placeholder="Votre avis..." required></textarea>
+
+  <select id="note">
+    <option value="★★★★★">★★★★★</option>
+    <option value="★★★★☆">★★★★☆</option>
+    <option value="★★★☆☆">★★★☆☆</option>
+    <option value="★★☆☆☆">★★☆☆☆</option>
+    <option value="★☆☆☆☆">★☆☆☆☆</option>
+  </select>
+
+  <button onclick="ajouterAvis()">Envoyer</button>
+</div>
+
+<!-- CONTAINER FOR NEW REVIEWS -->
+<div id="nouveaux-avis"></div>
+
+        </td>
+      </tr>
+
+    </table>
+  </main>
+
+</body>
+</html>
