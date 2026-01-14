@@ -228,10 +228,10 @@ h1.aceuilh {
 }
 
 .map-image img {
-  width: 700px;      
-  height: 400px;      
-  max-width: 95%;    
-  object-fit: cover;   
+  width: 700px;        /* كبّرنا العرض */
+  height: 400px;       /* حدّدنا الارتفاع */
+  max-width: 95%;      /* باش يبقى responsive في الهاتف */
+  object-fit: cover;   /* يقصّ الصورة بطريقة صحيحة */
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   transition: 0.3s;
@@ -305,6 +305,7 @@ h1.aceuilh {
     flex-direction: column;
   }
 }
+
 
 
 
